@@ -8,8 +8,8 @@ npx pdehaan/mozillaorg-sitemap [locale] [--check]
 
 ### Parameters
 
-- `locale`: Browser locale to check. Ie: "en-US", "de", "fr".
-- `--check`: Check for broken links.
+- `locale`: [optional; default="en-US"] Browser locale to check. Ie: "en-US", "de", "fr".
+- `--check`: [optional; default=false] Check for broken links.
 
 ### Example
 
