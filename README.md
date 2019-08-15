@@ -14,7 +14,7 @@ npx pdehaan/mozillaorg-sitemap [locale] [--check]
 ### Example
 
 ```sh
-$ npx pdehaan/mozillaorg-sitemap en-CA --check
+$ npx pdehaan/mozillaorg-sitemap en-CA
 
 {
   "locale": "en-CA",
@@ -68,6 +68,29 @@ $ npx pdehaan/mozillaorg-sitemap en-CA --check
     "https://www.mozilla.org/en-CA/technology/",
     "https://www.mozilla.org/en-CA/technology/browser-history/",
     "https://www.mozilla.org/en-CA/technology/what-is-a-browser/"
+  ]
+}
+```
+
+If you want to limit the number of sitemap results, you can set a `MAX_LINKS` environment variable.
+
+```sh
+$ MAX_LINKS=10 npx pdehaan/mozillaorg-sitemap de --check
+
+{
+  "locale": "de",
+  "origin": "https://www.mozilla.org",
+  "sitemap": [
+    "https://www.mozilla.org/de/",
+    "https://www.mozilla.org/de/about/",
+    "https://www.mozilla.org/de/about/governance/policies/participation/",
+    "https://www.mozilla.org/de/about/governance/policies/participation/reporting/",
+    "https://www.mozilla.org/de/about/history/",
+    "https://www.mozilla.org/de/about/legal/",
+    "https://www.mozilla.org/de/about/legal/acceptable-use/",
+    "https://www.mozilla.org/de/about/legal/impressum/",
+    "https://www.mozilla.org/de/about/legal/terms/firefox/",
+    "https://www.mozilla.org/de/about/legal/terms/mozilla/"
   ]
 }
 

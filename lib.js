@@ -2,15 +2,15 @@ const axios = require("axios");
 const check = require("check-broken-links");
 
 const MAX_LINKS = process.env.MAX_LINKS || 5000;
-const ORIGIN = "https://www.mozilla.org";
+const ORIGIN = "https://mozilla.org";
 
 module.exports = {
   checkLinks,
   localeSitemap,
-  ORIGIN,
+  ORIGIN
 };
 
-async function localeSitemap(locale="en-US", jsonSitemapURI="sitemap.json") {
+async function localeSitemap(locale = "en-US", jsonSitemapURI = "sitemap.json") {
   const sitemapUri = new URL(jsonSitemapURI, ORIGIN).href;
   const res = await axios.get(sitemapUri);
 
@@ -29,6 +29,6 @@ function _localeSitemap(sitemap, locale, origin) {
     .slice(0, MAX_LINKS);
 }
 
-async function checkLinks(sitemap=[], origin=ORIGIN) {
+async function checkLinks(sitemap = [], origin = ORIGIN) {
   return check(origin, sitemap);
 }

@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
-const {checkLinks, localeSitemap} = require("./lib");
+const { checkLinks, localeSitemap } = require("./lib");
 
 const argv = process.argv.slice(2);
 
 main(...argv);
 
-async function main(locale="en-US") {
+async function main(locale = "en-US") {
   const sitemap = await localeSitemap(locale);
   console.log(JSON.stringify(sitemap, null, 2));
 
