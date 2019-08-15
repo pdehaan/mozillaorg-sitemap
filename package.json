@@ -1,0 +1,17 @@
+{
+  "name": "mozillaorg-sitemap",
+  "version": "1.0.0",
+  "author": "Peter deHaan <peter@deseloper.com> (https://about.me/peterdehaan)",
+  "bin": "cli.js",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "check-broken-links": "^2.0.4"
+  },
+  "keywords": [],
+  "license": "MPL-2.0",
+  "main": "lib.js",
+  "scripts": {
+    "start": "verbose=true node cli --no-color",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
